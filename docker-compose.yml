@@ -1,18 +1,21 @@
 services:
   app:
-    image: node:alpine
-    ports:
-      - 3333:3000
-    command: sh -c 'npm i && npm run watch'
-    working_dir: /usr/src/app
+    build: ./app
     volumes:
-      - ./app:/usr/src/app/
+      - ./app/app:/code/app
+    ports:
+      - 8080:80
     env_file: .env
     depends_on:
       db:
         condition: service_healthy
     networks:
       - mflix
+    develop:
+      watch:
+        - path: ./app
+          action: rebuild
+          target: /code
 
   db:
     image: mongo
