@@ -36,7 +36,9 @@ MONGODB_URL="mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWOR
 
 ## Import automatique des données
 
-Données JSON : `./db/import/data.json` (il est possible de remplacer les données JSON, mais le fichier doit être nommé data.json)
+Données JSON : `./db/import/data.json` (il est possible de remplacer les données JSON, mais le fichier doit être nommé data.json).
+
+Les données JSON de test proviennent de <https://www.mongodb.com/docs/atlas/sample-data/sample-mflix/>.
 
 Attention, si les données du `./db/import/data.json` sont incorrectes, l'import échouera et le service __db__ ne pourra pas se démarrer.
 
