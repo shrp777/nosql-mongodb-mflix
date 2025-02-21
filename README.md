@@ -1,6 +1,11 @@
 # Mflix
 
-Node.js + MongoDB + Docker
+MongoDB + Docker
+
+L'application existe en 2 versions :
+
+- __Python + FastAPI (branche python)__ : $ `git switch python`
+- __Node.js + Express.js (branche nodejs)__ : $ `git switch nodejs`
 
 ## Variables d'environnement à adapter
 
